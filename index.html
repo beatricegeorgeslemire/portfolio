@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@200;300;400;600;700;800&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/f200e90931.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> 
     <link rel="stylesheet" href="./styles/styles.css">
 
 </head>
@@ -15,9 +17,9 @@
     <header>
         <nav>
             <div class="wrapper">
-                <label>
-                    <input type="checkbox">
-                    <span class="menu"> <span class="hamburger"></span> </span>
+                <label for="toggle" class="hamburger"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="toggle" name="toggle"/>
+                
                     <ul class="menuItems">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Me</a></li>
@@ -25,7 +27,6 @@
                         <li><a href="#">Projects</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                </label>
             </div>
         </nav>
             <div class="headerContent wrapper flexContainer">
@@ -33,20 +34,190 @@
                     <h1>Beatrice Georges-Lemire</h1>
                     <h2 class="typed animationType">Web Developer</h2>
                 </div>
-                <!-- <div>
-                    <img src="./assets/Headshot.webp" alt="a photo of me smiling">
-                </div> -->
+                <a class="arrow bounceAnim" href="#about">
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
             </div>
     </header>
 
     <main>
-        <!-- <section class="aboutMe">
-            <img src="./assets/Headshot.webp" alt="">
-            <div>
-                <h3>About me</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita odio quia deserunt obcaecati. Rerum maxime delectus, similique nostrum eligendi provident placeat alias consectetur, soluta fugit laudantium quia culpa recusandae quas adipisci! Facere, vitae. Odit earum doloribus quasi tenetur! Voluptatum dolores nulla et sit dolorem corporis possimus explicabo ab debitis assumenda ipsa, hic dolore asperiores corrupti aliquid voluptatem distinctio tenetur minima nostrum quis perferendis repellendus. Sint similique nisi sapiente placeat praesentium necessitatibus, dicta natus ea vitae! Distinctio illum esse voluptatibus ipsum. Distinctio ea iure rem placeat deleniti accusantium voluptates impedit mollitia!</p>
+        <section class="aboutMeSection" id="about">
+            <div class="wrapper aboutFlex">
+                <div class="imgContainer">
+                    <img src="./assets/Headshot.webp" alt="headshot of me smiling">
+                </div>
+                <div>
+                    <h3>About me</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita odio quia deserunt obcaecati. Rerum maxime delectus, similique nostrum eligendi provident placeat alias consectetur, soluta fugit laudantium quia culpa recusandae quas adipisci! Facere, vitae. Odit earum doloribus quasi tenetur! Voluptatum dolores nulla et sit dolorem corporis possimus explicabo ab debitis assumenda ipsa, hic dolore asperiores corrupti aliquid voluptatem distinctio tenetur minima nostrum quis perferendis repellendus. Sint similique nisi sapiente placeat praesentium necessitatibus, dicta natus ea vitae! Distinctio illum esse voluptatibus ipsum. Distinctio ea iure rem placeat deleniti accusantium voluptates impedit mollitia!</p>
+                </div>
             </div>
-        </section> -->
+        </section>
+        
+        <section class="toolsSection" id="tools">
+            <div class="wrapper">
+                <h3>My skills & tools</h3>
+                <ul class="tools">
+                    <li>
+                        <i class="fa-brands fa-html5"></i>
+                        <p>HTML5</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <p>CSS3</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-sass"></i>
+                        <p>Sass</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-js-square"></i>
+                        <p>JavaScript</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-react"></i>
+                        <p>React</p>
+                    </li>
+                    <li>
+                        <i class="devicon-jquery-plain"></i>
+                        <p>jQuery</p>
+                    </li>
+                    <li>
+                        <i class="devicon-firebase-plain"></i>
+                        <p>Firebase</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-git-alt"></i>
+                        <p>Git</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github"></i>
+                        <p>Github</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <p>Rest APIs</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <p>Responsive Design</p>
+                    </li>                
+                    <li>
+                        <i class="fa-solid fa-universal-access"></i>
+                        <p>Accessibility</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projectsSection" id="projects">
+            <div class="wrapper">
+                <h3>Projects</h3>
+                <div class="projectOne">
+                    <div class="imgProjOne">
+                        <img src="./assets/barOne.png" alt="screenshot of my bar-one project">
+                    </div>
+                    <div>
+                        <h4>Bar-One</h4>
+                        <p>Multi-page PSD made with a client brief and design files. The goal was to make it responsive across devices.</p>
+                        <h4>Built with</h4>
+                        <!-- <p>HTML, CSS and Sass</p> -->
+                        <div class="icons">
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-sass" title="Sass"></i>
+                            <i class="fa-solid fa-mobile-screen" title="Responsive Design"></i>
+                            <i class="fa-solid fa-universal-access" title="Accessibility"></i>
+                        </div>
+                        <a href="https://glittering-platypus-40413a.netlify.app/">Live Site</a>
+                        <span> | </span>
+                        <a href="https://github.com/beatricegeorgeslemire/beatriceGeorgesLemireproject1">Github</a>
+                    </div>
+                </div>
+
+                <div class="projectTwo">
+                    <div>
+                        <h4>What are we drinking tonight?</h4>
+                        <p>A cocktail recipe finder app that helps you find the perect drink for your night in or out. Uses two API calls, vanilla JavaScript and is responsive accross devices.</p>
+                        <h4>Built with</h4>
+                        <div class="icons">
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-sass" title="Sass"></i>
+                            <i class="fa-brands fa-js-square" title="Vanilla JavaScript"></i>
+                            <i class="fa-solid fa-laptop-code" title="Rest APIs"></i>
+                            <i class="fa-solid fa-mobile-screen" title="Responsive Design"></i>
+                            <i class="fa-solid fa-universal-access" title="Accessibility"></i>
+                        </div>
+                        <a href="https://dianna-beatrice-project2.netlify.app/">Live Site</a>
+                        <span> | </span>
+                        <a href="https://github.com/beatrice-dianna-project-two/paired-API-project">Github</a>
+                    </div>
+                    <div class="imgProjTwo">
+                        <img src="./assets/project2.png" alt="screenshot of the paired API project">
+                    </div>
+                </div>
+
+                <div class="projectThree">
+                    <div class="imgProjThree">
+                        <img src="./assets/project2.png" alt="screenshot of the paired API project">
+                    </div>
+                    <div>
+                        <h4>Project 3</h4>
+                        <p>A site I have not yet built, but it's gonna be really cool.</p>
+                        <h4>Built with</h4>
+                        <div class="icons">
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-sass" title="Sass"></i>
+                            <i class="fa-brands fa-react" title="React"></i>
+                            <i class="devicon-firebase-plain" title="Firebase"></i>
+                            <i class="fa-solid fa-mobile-screen" title="Responsive Design"></i>
+                            <i class="fa-solid fa-universal-access" title="Accessibility"></i>
+                        </div>
+                        <a href="https://glittering-platypus-40413a.netlify.app/">Live Site</a>
+                        <span> | </span>
+                        <a href="https://github.com/beatrice-dianna-project-two/paired-API-project">Github</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactSection" id="contact">
+            <div class="wrapper">
+                <h3>Contact Me</h3>
+                <p>Thank you for making it this far!</p>
+                <p>Feel free to leave me comments or inquiries, I'd love to hear from you. Check ou and reach out to me on my socials below!</p>
+                <p>You can also shoot an email at <a href="mailto:beatricegeorgeslemire@gmail.com" title="Email Beatrice directly">beatricegeorgeslemire@gmail.com</a></p>
+
+                <ul class="socials">
+                    <li>
+                        <a href="https://www.linkedin.com/in/beatrice-georges-lemire-248886144/">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/beatricegeorgeslemire">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/bea_g_lemire">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://medium.com/@ladybug2503">
+                            <i class="fab fa-medium-m"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="wrapper">
+            <p>Made with 💙 by Beatrice Georges-Lemire 2022</p>
+        </div>
+    </footer>
 </body>
 </html>

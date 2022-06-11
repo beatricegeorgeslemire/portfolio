@@ -1,145 +1,221 @@
-//Navigation hamburger menu
+// body {
+//     overflow-x: hidden;
+//     // position: relative;
+// }
+
+// //Navigation hamburger menu
+
+// label {
+//     // position: relative;
+// }
+// label .menu {
+//     position: absolute;
+//     right: -100px;
+//     top: -100px;
+//     z-index: 200;
+//     width: 200px;
+//     height: 200px;
+//     background: rgba(31, 31, 32, .9);
+//     border-radius: 50% 50% 50% 50%;
+//     -webkit-transition: .5s ease-in-out;
+//     transition: .5s ease-in-out;
+//     cursor: pointer;
+//     border: none;
+// }
+
+// label .hamburger {
+//     position: absolute;
+//     top: 135px;
+//     left: 50px;
+//     width: 30px;
+//     height: 2px;
+//     background: white;
+//     display: block;
+//     -webkit-transform-origin: center;
+//     transform-origin: center;
+//     -webkit-transition: .5s ease-in-out;
+//     transition: .5s ease-in-out;
+// }
+
+// label .hamburger::after, label .hamburger::before {
+//     -webkit-transition: .5s ease-in-out;
+//     transition: .5s ease-in-out;
+//     content: "";
+//     position: absolute;
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     background: white;
+// }
+
+// label .hamburger::before {
+//     top: -10px;
+// }
+
+// label .hamburger::after {
+//     bottom: -10px;
+// }
+
+// label input {
+//     display: none;
+// }
+
+// label input:checked + .menu {
+//     box-shadow: 0 0 0 100vw rgba(31, 31, 32, .9), 0 0 0 100vh rgba(31, 31, 32, .9);
+//     border-radius: 50%;
+// }
+
+// label input:checked + .menu .hamburger {
+//     -webkit-transform: rotate(45deg);
+//     transform: rotate(45deg);
+// }
+
+// label input:checked + .menu .hamburger::after {
+//     -webkit-transform: rotate(90deg);
+//     transform: rotate(90deg);
+//     bottom: 0;
+// }
+
+// label input:checked + .menu .hamburger::before {
+//     -webkit-transform: rotate(90deg);
+//     transform: rotate(90deg);
+//     top: 0;
+// }
+
+// label input:checked + .menu + ul {
+//     opacity: 1;
+// }
+
+// label ul {
+//     list-style-type: none;
+//     text-decoration: none;
+//     z-index: 200;
+//     position: fixed;
+//     top: 50%;
+//     left: 50%;
+//     -webkit-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+//     opacity: 0;
+//     -webkit-transition: .25s 0s ease-in-out;
+//     transition: .25s 0s ease-in-out;
+// }
+
+// label a {
+//     margin-bottom: 1.5rem;
+//     display: block;
+//     color: rgba(255,255,255,.3);
+//     text-decoration: none;
+//     font-size: 2rem;
+//     font-weight: 700;
+//     text-align: center;
+//     text-transform: uppercase;
+//     position: relative;
+//     -webkit-transition: all 0.3s ease-in-out;
+//     transition: all 0.3s ease-in-out;
+// }
+
+// label li a:hover,
+// label li a:focus {
+//     -webkit-transition: all 0.3s ease-in-out;
+//     transition: all 0.3s ease-in-out;
+//     transform-origin: left;
+//     transform: scaleX(1);
+//     color: white;
+// }
+
+// label li a::before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     height: 50%;
+//     width: 100%;
+//     background: $blue;
+//     transform-origin: right;
+//     transform: scaleX(0);
+//     transition: transform .3s ease-in-out;
+//     z-index: -1;
+// }
+
+// a:hover::before {
+//     transform-origin: left;
+//     transform: scaleX(1);
+// }
+
 nav {
-    label {
-        ul {
-            list-style-type: none;
-            text-decoration: none;
+    
+    ul {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        
+        li {
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: 1.9px;
+            line-height: 29px;
+            list-style: none;
+            color: $white;
+            padding: 25px 30px;
+            text-transform: uppercase;
         }
     }
 }
 
-label .menu {
-    position: fixed;
-    right: -100px;
-    top: -100px;
-    z-index: 100;
-    width: 200px;
-    height: 200px;
-    background: rgba(31, 31, 32, .9);
-    border-radius: 50% 50% 50% 50%;
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    border: none;
-}
-
-label .hamburger {
-    position: absolute;
-    top: 135px;
-    left: 50px;
-    width: 30px;
-    height: 2px;
-    background: white;
-    display: block;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-}
-
-label .hamburger::after, label .hamburger::before {
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: white;
-}
-
-label .hamburger::before {
-    top: -10px;
-}
-
-label .hamburger::after {
-    bottom: -10px;
-}
-
-label input {
+input[type="checkbox"] {
     display: none;
 }
 
-label input:checked + .menu {
-    box-shadow: 0 0 0 100vw rgba(31, 31, 32, .9), 0 0 0 100vh rgba(31, 31, 32, .9);
-    border-radius: 50%;
+label[for="toggle"] {
+    position: absolute;
+    top: -100px;
 }
 
-label input:checked + .menu .hamburger {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-label input:checked + .menu .hamburger::after {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    bottom: 0;
-}
-
-label input:checked + .menu .hamburger::before {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+ul.menuItems {
+    flex-direction: column;
+    background: black;
+    position: fixed;
+    z-index: 50;
+    width: 45%;
+    right: -45%;
     top: 0;
+    height: 100%;
+    transition: all 0.5s;
+    a {
+        border-bottom: 1px solid grey;
+        display: inline-block;
+        font-size: 40px;
+        width: 100%;
+        padding: 20px;
+        transition: all 0.3s;
+    }
 }
 
-label input:checked + .menu + ul {
-    opacity: 1;
+ul.menuItems a:hover,
+ul.menuItems a:focus {
+    color: $dustyorange;
 }
 
-label ul {
-    z-index: 200;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    -webkit-transition: .25s 0s ease-in-out;
-    transition: .25s 0s ease-in-out;
+input[type="checkbox"]:checked + ul.menuItems {
+    right: 0;
 }
 
-label a {
-    margin-bottom: 1.5rem;
-    display: block;
-    color: rgba(255,255,255,.3);
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+input[type="checkbox"] {
+    display: none;
 }
 
-label li a:hover,
-label li a:focus {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    transform-origin: left;
-    transform: scaleX(1);
+label[for="toggle"] {
+    font-size: 50px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
     color: white;
+    z-index: 50;
 }
 
-label li a::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 50%;
-    width: 100%;
-    background: $blue;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-    z-index: -1;
-}
 
-a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
+
 
 
 //Header
@@ -147,13 +223,14 @@ header {
     height: 100vh;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2N8+vTpfwYGBgZpaWlGEI0LMBKtEJ8pyHJ4rRtVCAAd/QgLwKUsAgAAAABJRU5ErkJggg==);
     display: block;
-    position: absolute;
-    height: 100%;
+    position: relative;
     width: 100%;
     bottom: 0;
     z-index: -10;
     .headerContent {
-        margin-top: 40vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 40vh;
         max-height: 100vh;
         h1 {
             font-size: 2.5rem;
@@ -195,6 +272,12 @@ h1::before {
     background: $blue;
     opacity: 0.7;
     cursor: default;
+}
+
+header .arrow {
+    margin: 0 auto;
+    font-size: 3rem;
+    color: #5b5963;
 }
 
 

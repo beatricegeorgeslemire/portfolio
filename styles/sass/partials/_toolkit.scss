@@ -1,0 +1,40 @@
+.toolsSection {
+    background: $offwhite;
+    padding: 2.5rem 0;
+    h3 {
+        margin: 1.5rem auto 2rem;
+    }
+}
+.tools {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    li {
+        width: calc(100% / 4);
+        padding-top: 1.5rem;
+        text-align: center;
+        font-size: 1rem;
+        i {
+            font-size: 3rem;
+            transition: all .3s ease-in-out;
+        }
+        p {
+            opacity: 0;
+            transition: 0.25s ease-in-out;
+        }
+    }
+}
+
+
+li:hover,
+li:focus {
+    i {
+        color: $blue;
+        // transform: scale(1.1);
+    }
+    p{
+        opacity: 1; 
+    }
+}

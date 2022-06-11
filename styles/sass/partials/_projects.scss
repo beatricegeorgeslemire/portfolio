@@ -1,0 +1,104 @@
+.projectsSection {
+    background: $white;
+    padding: 2.5rem 0;
+    a {
+        text-decoration: none;
+        color: #5b5963;
+        padding: 1.1rem 0 0.8rem;
+        margin-right: 0;
+        text-align: center;
+        border-radius: 10px;
+    }
+    span {
+        padding: 0 0.5rem;
+    }
+    h3 {
+        margin: 1.5rem auto 2rem;
+        padding: 0 0 30px;
+    }
+    .projectOne,
+    .projectTwo,
+    .projectThree {
+        display: flex;
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+        background: $offwhite;
+        border-radius: 15px;
+        padding: 1rem 2rem;
+        .imgProjOne,
+        .imgProjTwo,
+        .imgProjThree {
+            object-fit: cover;
+            padding-right: 2rem;
+            img {
+                width: 400px;
+                border-radius: 15px;
+            }
+        }
+        .imgProjTwo {
+            padding-right: 0;
+            padding-left: 2rem;
+        }
+        h4 {
+            margin: 0 0 0.5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .icons {
+            display: flex;
+            font-size: 2rem;
+            i {
+                padding: 0 0.7rem 1.1rem 0;
+            }
+        }
+    }
+    .projectTwo {
+        text-align: right;
+        .icons {
+            justify-content: right;
+            i {
+                padding: 0 0 1.1rem 0.7rem;
+            }
+        }
+    }
+}
+
+.projectsSection {
+    .wrapper {
+        .projectOne,
+        .projectTwo,
+        .projectThree {
+            a {
+                position: relative;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                a:hover,
+                a:focus {
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                transform-origin: left;
+                transform: scaleX(1);
+                }
+                a::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 50%;
+                width: 100%;
+                background: $blue;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform .3s ease-in-out;
+                z-index: -1;
+                }
+        
+                a:hover::before {
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
