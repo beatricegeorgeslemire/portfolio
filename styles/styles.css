@@ -938,4 +938,8 @@ footer p {
     padding: 0.7rem;
     font-size: 2rem;
   }
+
+  .contactSection p a {
+    font-size: 0.8rem;
+  }
 }
