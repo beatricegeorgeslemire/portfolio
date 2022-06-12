@@ -1,14 +1,14 @@
 .projectsSection {
     background: $white;
     padding: 2.5rem 0;
-    a {
-        text-decoration: none;
-        color: #5b5963;
-        padding: 1.1rem 0 0.8rem;
-        margin-right: 0;
-        text-align: center;
-        border-radius: 10px;
-    }
+    // a {
+    //     // text-decoration: none;
+    //     // color: #5b5963;
+    //     // padding: 1.1rem 0 0.8rem;
+    //     // margin-right: 0;
+    //     // text-align: center;
+    //     // border-radius: 10px;
+    // }
     span {
         padding: 0 0.5rem;
     }
@@ -63,42 +63,43 @@
     }
 }
 
-.projectsSection {
-    .wrapper {
-        .projectOne,
-        .projectTwo,
-        .projectThree {
-            a {
+.projectsSection a {
+                text-decoration: none;
+                position: relative;
+                color: #5b5963;
+                padding: 1.1rem 0 0;
+                margin: 0 0 0.8rem;
+                text-align: center;
+                border-radius: 10px;
                 position: relative;
                 -webkit-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
-                a:hover,
-                a:focus {
+}
+.projectsSection a:hover,
+.projectsSection a:focus {
                 -webkit-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
                 transform-origin: left;
                 transform: scaleX(1);
                 }
-                a::before {
+
+.projectsSection a::before {
                 content: "";
                 display: block;
                 position: absolute;
                 left: 0;
                 bottom: 0;
-                height: 50%;
+                height: 8%;
                 width: 100%;
                 background: $blue;
+                opacity: 0.8;
                 transform-origin: right;
                 transform: scaleX(0);
                 transition: transform .3s ease-in-out;
-                z-index: -1;
+                z-index: 1;
                 }
         
-                a:hover::before {
+.projectsSection a:hover::before {
                     transform-origin: left;
                     transform: scaleX(1);
                 }
-            }
-        }
-    }
-}

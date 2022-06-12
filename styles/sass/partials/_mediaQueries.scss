@@ -1,0 +1,73 @@
+@media(max-width: 940px) {
+
+    .aboutMeSection {
+        padding: 2rem 0;
+        .aboutFlex {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .imgContainer {
+                padding: 0;
+            }
+            h3 {
+                margin: auto;
+                padding: 2rem 0 1rem;
+            }
+        }
+    }
+
+    .projectsSection {
+        padding: 1.5rem 0;
+        .projectOne,
+        .projectTwo,
+        .projectThree {
+            flex-direction: column;
+            justify-content: center;
+            h4 {
+                padding: 1rem 0 0;
+            }
+            img {
+                max-width: 100%;
+                margin: auto;
+            }
+            
+            .imgProjTwo {
+                padding: 1rem 0 0;
+            }
+        }
+        .icons {
+            flex-wrap: wrap;
+            i {
+            width: calc(100% / 4);
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+
+    .toolsSection {
+        li {
+            width: calc(100% / 3);
+        }
+    }
+}
+
+@media(max-width: 480px) {
+
+    .toolsSection {
+        li p {
+            opacity: 1;
+            font-size: 0.9rem;
+        }
+    }
+
+    .contactSection .socials {
+        padding: 0;
+        li {
+        padding: 0.7rem;
+        font-size: 2rem;
+        }
+    } 
+
+}
