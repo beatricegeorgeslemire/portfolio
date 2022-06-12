@@ -5,6 +5,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        p a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #5b5963;
+        }
         .imgContainer {
             padding-right: 5rem;
             img {

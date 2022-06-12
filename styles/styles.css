@@ -365,13 +365,13 @@ ul.menuItems {
   background: rgba(31, 31, 32, 0.9);
   position: fixed;
   z-index: 50;
-  width: 90%;
-  right: -90%;
+  width: 80%;
+  left: -80%;
   top: 0;
   text-align: center;
   height: 100vh;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 ul.menuItems a {
   display: inline-block;
@@ -389,7 +389,7 @@ ul.menuItems a:focus {
 }
 
 input[type=checkbox]:checked + ul.menuItems {
-  right: 0;
+  left: 0;
 }
 
 input[type=checkbox] {
@@ -397,10 +397,10 @@ input[type=checkbox] {
 }
 
 label[for=toggle] {
-  font-size: 50px;
+  font-size: 2rem;
   position: fixed;
   top: 10px;
-  left: 20px;
+  right: 20px;
   color: #5b5963;
   z-index: 50;
 }
@@ -469,8 +469,41 @@ h1::before {
 .arrowContainer i {
   font-size: 2rem;
   color: #5b5963;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-animation: float 4s ease-in-out infinite;
+          animation: float 4s ease-in-out infinite;
 }
 
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
 .typed {
   position: relative;
   top: 50%;
@@ -534,6 +567,11 @@ h1::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.aboutMeSection .aboutFlex p a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #5b5963;
 }
 .aboutMeSection .aboutFlex .imgContainer {
   padding-right: 5rem;
