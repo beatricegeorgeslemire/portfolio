@@ -242,6 +242,10 @@ html {
   padding-bottom: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 main {
   background: rgba(236, 236, 236, 0.9176470588);
 }
