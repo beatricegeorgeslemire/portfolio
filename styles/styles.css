@@ -591,8 +591,8 @@ h1::before {
 
 .imgAnimation {
   padding-right: 5rem;
-  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -619,6 +619,32 @@ h1::before {
     -webkit-transform: translateX(0px);
     transform: translateX(0px);
     opacity: 1;
+  }
+}
+.textAnimation {
+  padding-left: 5rem;
+  -webkit-animation: slide-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
   }
 }
 .toolsSection {
@@ -684,11 +710,10 @@ li:focus p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 3rem 0;
   margin-bottom: 2rem;
   background: rgba(236, 236, 236, 0.9176470588);
   border-radius: 15px;
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
 }
 .projectsSection .projectOne .imgProjOne,
 .projectsSection .projectOne .imgProjTwo,
@@ -701,7 +726,8 @@ li:focus p {
 .projectsSection .projectThree .imgProjThree {
   -o-object-fit: cover;
      object-fit: cover;
-  padding-right: 2rem;
+  margin-right: 2rem;
+  padding: 0;
 }
 .projectsSection .projectOne .imgProjOne img,
 .projectsSection .projectOne .imgProjTwo img,
@@ -714,12 +740,16 @@ li:focus p {
 .projectsSection .projectThree .imgProjThree img {
   width: 400px;
   border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .projectsSection .projectOne .imgProjTwo,
 .projectsSection .projectTwo .imgProjTwo,
 .projectsSection .projectThree .imgProjTwo {
   padding-right: 0;
-  padding-left: 2rem;
+  margin-left: 2rem;
 }
 .projectsSection .projectOne h4,
 .projectsSection .projectTwo h4,
@@ -751,6 +781,16 @@ li:focus p {
 }
 .projectsSection .projectTwo .icons i {
   padding: 0 0 1.1rem 0.7rem;
+}
+
+.imgProjOne img:hover,
+.imgProjOne img:focus,
+.imgProjTwo img:hover,
+.imgProjTwo img:focus,
+.imgProjThree img:hover,
+.imgProjThree img:focus {
+  -webkit-box-shadow: -1px 0px 15px 5px rgb(86, 172, 252);
+  box-shadow: -1px 0px 15px 5px rgb(86, 172, 252);
 }
 
 .projectsSection a {
