@@ -20,7 +20,8 @@
         padding: 1.5rem 0;
         .projectOne,
         .projectTwo,
-        .projectThree {
+        .projectThree,
+        .projectFour {
             flex-direction: column;
             justify-content: center;
             h4 {
@@ -31,7 +32,8 @@
                 margin: auto;
             }
             
-            .imgProjTwo {
+            .imgProjTwo,
+            .imgProjFour {
                 padding: 1rem 0 0;
             }
         }
@@ -51,6 +53,27 @@
             width: calc(100% / 3);
         }
     }
+
+    .projectsSection .projectTwo, 
+    .projectsSection .projectFour {
+        text-align: left;
+        flex-direction: column-reverse;
+        .imgProjFour,
+        .imgProjTwo {
+            margin-left: 0;
+            margin-right: 0;
+            padding-top: 0;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .projectsSection .projectThree .imgProjThree,
+    .projectsSection .projectOne .imgProjOne {
+        margin-right: 0;
+        padding-bottom: 1rem;
+    }
+
+    
 }
 
 @media(max-width: 480px) {

@@ -706,7 +706,8 @@ li:focus p {
 }
 .projectsSection .projectOne,
 .projectsSection .projectTwo,
-.projectsSection .projectThree {
+.projectsSection .projectThree,
+.projectsSection .projectFour {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -718,12 +719,19 @@ li:focus p {
 .projectsSection .projectOne .imgProjOne,
 .projectsSection .projectOne .imgProjTwo,
 .projectsSection .projectOne .imgProjThree,
+.projectsSection .projectOne .imgProjFour,
 .projectsSection .projectTwo .imgProjOne,
 .projectsSection .projectTwo .imgProjTwo,
 .projectsSection .projectTwo .imgProjThree,
+.projectsSection .projectTwo .imgProjFour,
 .projectsSection .projectThree .imgProjOne,
 .projectsSection .projectThree .imgProjTwo,
-.projectsSection .projectThree .imgProjThree {
+.projectsSection .projectThree .imgProjThree,
+.projectsSection .projectThree .imgProjFour,
+.projectsSection .projectFour .imgProjOne,
+.projectsSection .projectFour .imgProjTwo,
+.projectsSection .projectFour .imgProjThree,
+.projectsSection .projectFour .imgProjFour {
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 2rem;
@@ -732,35 +740,50 @@ li:focus p {
 .projectsSection .projectOne .imgProjOne img,
 .projectsSection .projectOne .imgProjTwo img,
 .projectsSection .projectOne .imgProjThree img,
+.projectsSection .projectOne .imgProjFour img,
 .projectsSection .projectTwo .imgProjOne img,
 .projectsSection .projectTwo .imgProjTwo img,
 .projectsSection .projectTwo .imgProjThree img,
+.projectsSection .projectTwo .imgProjFour img,
 .projectsSection .projectThree .imgProjOne img,
 .projectsSection .projectThree .imgProjTwo img,
-.projectsSection .projectThree .imgProjThree img {
+.projectsSection .projectThree .imgProjThree img,
+.projectsSection .projectThree .imgProjFour img,
+.projectsSection .projectFour .imgProjOne img,
+.projectsSection .projectFour .imgProjTwo img,
+.projectsSection .projectFour .imgProjThree img,
+.projectsSection .projectFour .imgProjFour img {
   width: 400px;
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
+  background-color: rgb(86, 172, 252);
 }
 .projectsSection .projectOne .imgProjTwo,
+.projectsSection .projectOne .imgProjFour,
 .projectsSection .projectTwo .imgProjTwo,
-.projectsSection .projectThree .imgProjTwo {
+.projectsSection .projectTwo .imgProjFour,
+.projectsSection .projectThree .imgProjTwo,
+.projectsSection .projectThree .imgProjFour,
+.projectsSection .projectFour .imgProjTwo,
+.projectsSection .projectFour .imgProjFour {
   padding-right: 0;
   margin-left: 2rem;
 }
 .projectsSection .projectOne h4,
 .projectsSection .projectTwo h4,
-.projectsSection .projectThree h4 {
+.projectsSection .projectThree h4,
+.projectsSection .projectFour h4 {
   margin: 0 0 0.5rem;
   font-weight: 300;
   text-transform: uppercase;
 }
 .projectsSection .projectOne .icons,
 .projectsSection .projectTwo .icons,
-.projectsSection .projectThree .icons {
+.projectsSection .projectThree .icons,
+.projectsSection .projectFour .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -768,19 +791,35 @@ li:focus p {
 }
 .projectsSection .projectOne .icons i,
 .projectsSection .projectTwo .icons i,
-.projectsSection .projectThree .icons i {
+.projectsSection .projectThree .icons i,
+.projectsSection .projectFour .icons i {
   padding: 0 0.7rem 1.1rem 0;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
-.projectsSection .projectTwo {
+.projectsSection .projectTwo,
+.projectsSection .projectFour {
   text-align: right;
 }
-.projectsSection .projectTwo .icons {
+.projectsSection .projectTwo .icons,
+.projectsSection .projectFour .icons {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
 }
-.projectsSection .projectTwo .icons i {
+.projectsSection .projectTwo .icons i,
+.projectsSection .projectFour .icons i {
   padding: 0 0 1.1rem 0.7rem;
+}
+
+.projectFour p a {
+  margin: 0;
+  padding: 0;
+}
+
+.icons i:hover,
+.icons i:focus {
+  color: rgb(86, 172, 252);
 }
 
 .imgProjOne img:hover,
@@ -788,7 +827,9 @@ li:focus p {
 .imgProjTwo img:hover,
 .imgProjTwo img:focus,
 .imgProjThree img:hover,
-.imgProjThree img:focus {
+.imgProjThree img:focus,
+.imgProjFour img:hover,
+.imgProjFour img:focus {
   -webkit-box-shadow: -1px 0px 15px 5px rgb(86, 172, 252);
   box-shadow: -1px 0px 15px 5px rgb(86, 172, 252);
 }
@@ -982,13 +1023,13 @@ footer p {
     margin: auto;
     padding: 2rem 0 1rem;
   }
-
   .projectsSection {
     padding: 1.5rem 0;
   }
   .projectsSection .projectOne,
 .projectsSection .projectTwo,
-.projectsSection .projectThree {
+.projectsSection .projectThree,
+.projectsSection .projectFour {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -999,18 +1040,25 @@ footer p {
   }
   .projectsSection .projectOne h4,
 .projectsSection .projectTwo h4,
-.projectsSection .projectThree h4 {
+.projectsSection .projectThree h4,
+.projectsSection .projectFour h4 {
     padding: 1rem 0 0;
   }
   .projectsSection .projectOne img,
 .projectsSection .projectTwo img,
-.projectsSection .projectThree img {
+.projectsSection .projectThree img,
+.projectsSection .projectFour img {
     max-width: 100%;
     margin: auto;
   }
   .projectsSection .projectOne .imgProjTwo,
+.projectsSection .projectOne .imgProjFour,
 .projectsSection .projectTwo .imgProjTwo,
-.projectsSection .projectThree .imgProjTwo {
+.projectsSection .projectTwo .imgProjFour,
+.projectsSection .projectThree .imgProjTwo,
+.projectsSection .projectThree .imgProjFour,
+.projectsSection .projectFour .imgProjTwo,
+.projectsSection .projectFour .imgProjFour {
     padding: 1rem 0 0;
   }
   .projectsSection .icons {
@@ -1025,13 +1073,34 @@ footer p {
   .toolsSection li {
     width: 33.3333333333%;
   }
+  .projectsSection .projectTwo,
+.projectsSection .projectFour {
+    text-align: left;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .projectsSection .projectTwo .imgProjFour,
+.projectsSection .projectTwo .imgProjTwo,
+.projectsSection .projectFour .imgProjFour,
+.projectsSection .projectFour .imgProjTwo {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+  .projectsSection .projectThree .imgProjThree,
+.projectsSection .projectOne .imgProjOne {
+    margin-right: 0;
+    padding-bottom: 1rem;
+  }
 }
 @media (max-width: 480px) {
   .toolsSection li p {
     opacity: 1;
     font-size: 0.7rem;
   }
-
   .contactSection .socials {
     padding: 0;
   }
@@ -1039,7 +1108,6 @@ footer p {
     padding: 0.7rem;
     font-size: 2rem;
   }
-
   .contactSection p a {
     font-size: 0.8rem;
   }

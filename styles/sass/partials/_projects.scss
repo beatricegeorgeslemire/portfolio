@@ -10,7 +10,8 @@
     }
     .projectOne,
     .projectTwo,
-    .projectThree {
+    .projectThree,
+    .projectFour {
         display: flex;
         margin-bottom: 2rem;
         background: $offwhite;
@@ -18,7 +19,8 @@
         padding: 3rem 2rem;
         .imgProjOne,
         .imgProjTwo,
-        .imgProjThree {
+        .imgProjThree,
+        .imgProjFour {
             object-fit: cover;
             margin-right: 2rem;
             padding: 0;
@@ -27,9 +29,11 @@
                 border-radius: 15px;
                 object-fit: cover;
                 transition: 0.25s ease-in-out;
+                background-color: $blue;
             }
         }
-        .imgProjTwo {
+        .imgProjTwo,
+        .imgProjFour {
             padding-right: 0;
             margin-left: 2rem;
         }
@@ -43,10 +47,12 @@
             font-size: 2rem;
             i {
                 padding: 0 0.7rem 1.1rem 0;
+                transition: color 0.2s ease-in-out;
             }
         }
     }
-    .projectTwo {
+    .projectTwo,
+    .projectFour {
         text-align: right;
         .icons {
             justify-content: right;
@@ -57,9 +63,20 @@
     }
 }
 
+.projectFour p a {
+    margin: 0;
+    padding: 0;
+}
+
+.icons i:hover,
+.icons i:focus {
+    color: $blue;
+}
+
 .imgProjOne,
 .imgProjTwo,
-.imgProjThree {
+.imgProjThree,
+.imgProjFour {
     img:hover,
     img:focus {
         -webkit-box-shadow: -1px 0px 15px 5px $blue; 
